@@ -1,0 +1,230 @@
+[
+  {
+    "categoria": "Molinos manuales",
+    "nombre": "Molino 1",
+    "descripcion": "Molino manual con cuchillas cónicas en Acero inoxidable de 38mmMolinedas para espresso, filtrados y citación",
+    "precio": 160000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Molinos manuales",
+    "nombre": "Molino 2",
+    "descripcion": "Molino manual con cuchillas cónicas en Acero inoxidable de 38mmMolinedas para espresso, filtrados y citación",
+    "precio": 240000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "inactivo"
+  },
+  {
+    "categoria": "Molinos manuales",
+    "nombre": "Molino 3",
+    "descripcion": "Molino manual con cuchillas cónicas en Acero inoxidable de 38mmMolinedas para espresso, filtrados y citación",
+    "precio": 360000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Métodos de preparación",
+    "nombre": "Chemex Original",
+    "descripcion": "Capacidad de 6 tazas",
+    "precio": 310000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Métodos de preparación",
+    "nombre": "Aeropress Original",
+    "descripcion": "Incluye cuchara medidora, etc..",
+    "precio": 230000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "inactivo"
+  },
+  {
+    "categoria": "Métodos de preparación",
+    "nombre": "Dripper Hario V60",
+    "descripcion": "Incluye 40 filtros",
+    "precio": 210000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Métodos de preparación",
+    "nombre": "Dripper cristal",
+    "descripcion": "Cafetera Dripper 02",
+    "precio": 95000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Teteras cuello de cisne",
+    "nombre": "Hervidor eléctrico",
+    "descripcion": "",
+    "precio": 240000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "inactivo"
+  },
+  {
+    "categoria": "Teteras cuello de cisne",
+    "nombre": "Hervidor programable",
+    "descripcion": "",
+    "precio": 260000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Teteras cuello de cisne",
+    "nombre": "Hervidor eléctrico cuello ",
+    "descripcion": "",
+    "precio": 260000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Máquinas espresso",
+    "nombre": "Modelo 1",
+    "descripcion": "",
+    "precio": 945000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "inactivo"
+  },
+  {
+    "categoria": "Máquinas espresso",
+    "nombre": "Modelo 2",
+    "descripcion": "",
+    "precio": 1850000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "inactivo"
+  },
+  {
+    "categoria": "Máquinas espresso",
+    "nombre": "Modelo 3",
+    "descripcion": "",
+    "precio": 11000000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Grameras",
+    "nombre": "G1",
+    "descripcion": "",
+    "precio": 110000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Grameras",
+    "nombre": "G2",
+    "descripcion": "",
+    "precio": 145000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "inactivo"
+  },
+  {
+    "categoria": "Grameras",
+    "nombre": "G3",
+    "descripcion": "",
+    "precio": 180000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Jarras para Arte Latte",
+    "nombre": "Jarra 480ml",
+    "descripcion": "",
+    "precio": 175000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Jarras para Arte Latte",
+    "nombre": "Jarra PRO",
+    "descripcion": "",
+    "precio": 240000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Jarras para Arte Latte",
+    "nombre": "Jarra jibbi 350ml",
+    "descripcion": "",
+    "precio": 175000,
+    "media": [
+      "imagen",
+      "imagen",
+      "imagen"
+    ],
+    "estado": "inactivo"
+  }
+]

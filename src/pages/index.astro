@@ -1,11 +1,16 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Image from 'astro/components/Image.astro';
+import heroimg from '../assets/heroimg.png';
 ---
-
 <Layout>
-	<Welcome />
+	<p>Call out ideal client here</p>
+	<p>A short headline focusing on the customer's desire or problem solved</p>
+	<p>One short subheading that adds specificity to the headline by clarifying what you do or who you help</p>
+	<button>Specific CTA emphasizing what happens next</button>
+	<p>Social proof</p>
+	<Image src={heroimg} alt="Hero Image" width={500} height={500} />
+	<p>Beneficio 1 Beneficio 2 Beneficio 3</p>
+
+	<a href="/catalog">Ver catálogo</a>
 </Layout>
