@@ -1,23 +1,102 @@
+---
+import NavMenu from "@components/NavMenu.astro";
+import CartDialog from "@components/cart/CartDialog.astro";
+
+const titulo = "El Rincón del Barista";
+const descripcion = "Convierte tu pasión por el café en habilidades de nivel competitivo";
+const logo = "/logotipo.png";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Buitron</title>
+		<title>{titulo}</title>
+		<link rel="canonical" href={canonicalURL.href} />
+		<link rel="preconnect" href="//res.cloudinary.com" />
+		<link rel="dns-prefetch" href="//res.cloudinary.com">
+		<!-- <link rel="preload" href="/fonts/main.woff2" as="font" type="font/woff2" crossorigin> -->
+		<link rel="preload" as="image" href={logo} />
+		<link rel="icon" href={logo} />
+		<meta name="description" content={descripcion} />
+		<meta name="robots" content="index, follow" />
+		<meta name="og:image" content={logo} />
+		<meta name="og:title" content={titulo} />
+		<meta name="og:description" content={descripcion} />
+		<meta name="og:url" content={canonicalURL.href} />
+		<meta name="og:site_name" content={titulo} />
+		<meta name="og:type" content="website" />
+		<meta name="og:locale" content="es_CO" />
 	</head>
 	<body>
+		<NavMenu />
+		<CartDialog />
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
+	@import "tailwindcss";
+	:root {
+	--brand: #B98141;
+	--on-brand: #FFFFFF;
+	--accent: #B98141;
+
+	--neutral-0: #ffffff;
+	--neutral-900: #1A1A1A;
+
+	--color-bg: #1A1A1A;
+	--color-bg-secondary: #F4F3ED;
+	--color-text: var(--neutral-0);
+
+	--primary-color: #007bff;
+	--secondary-color: #6c757d;
+
+	--theme-ui-colors-text: #1A1A1A;
+    --theme-ui-colors-background: #FFFFFF;
+    --theme-ui-colors-primary: #B98141;
+    --theme-ui-colors-goldLighter: #F4D2A0;
+    --theme-ui-colors-goldLight: #E0AB6F;
+    --theme-ui-colors-goldPrimary: #B98141;
+    --theme-ui-colors-goldDark: #9A601D;
+    --theme-ui-colors-black: #000000;
+    --theme-ui-colors-white: #FFFFFF;
+    --theme-ui-colors-beige50: #F7F7F6;
+    --theme-ui-colors-beige100: #F4F3ED;
+    --theme-ui-colors-grey50: #F5F5F5;
+    --theme-ui-colors-grey100: #E6E6E6;
+    --theme-ui-colors-grey200: #D0D0D0;
+    --theme-ui-colors-grey300: #B2B2B2;
+    --theme-ui-colors-grey400: #6E6E6E;
+    --theme-ui-colors-grey500: #5A5A5A;
+    --theme-ui-colors-grey600: #3C3C3C;
+    --theme-ui-colors-grey700: #1A1A1A;
+    --theme-ui-colors-navy: #213B58;
+    --theme-ui-colors-olive: #B6B8AC;
+    --theme-ui-colors-sand: #EBE2CC;
+    --theme-ui-colors-charcoal: #202020;
+    --theme-ui-colors-canvas: #E5E3DC;
+    --theme-ui-colors-critical100: #FEF2F2;
+    --theme-ui-colors-critical400: #FF6161;
+    --theme-ui-colors-critical500: #D60000;
+    --theme-ui-colors-critical700: #4D0000;
+    --theme-ui-colors-positive100: #F2FCF6;
+    --theme-ui-colors-positive400: #00C851;
+    --theme-ui-colors-positive500: #008033;
+    --theme-ui-colors-positive700: #00481D;
+    --theme-ui-colors-tcsPurple: #6402A2;
+    --theme-ui-colors-holidayRed: #E00000;
+    --theme-ui-colors-tmobilePink: #ED008C;
+}
 	html,
 	body {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
+		min-width: 100%;
+		min-height: 100%;
+		scroll-behavior: smooth;
 	}
 </style>

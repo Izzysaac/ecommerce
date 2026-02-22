@@ -1,0 +1,164 @@
+---
+
+---
+<dialog id="cart-dialog" class="cart-dialog">
+
+	<div class="cart-header">
+		<h2>Carrito</h2>
+		<button type="button" id="cart-close" class="icon-button" aria-label="Cerrar carrito">×</button>
+	</div>
+
+	<div id="cart-items" class="cart-items"></div>
+
+	<div class="cart-footer">
+		<div class="cart-total-row">
+			<span>Total</span>
+			<strong id="cart-total">$0</strong>
+		</div>
+		<div class="cart-actions">
+			<button type="button" id="cart-clear" class="secondary">Vaciar</button>
+			<a href="/checkout" class="primary">Ir a pagar</a>
+		</div>
+	</div>
+</dialog>
+
+<script src="/src/scripts/cart.js"></script>
+
+<style>
+	.cart-dialog {
+		width: min(520px, 92vw);
+		border: none;
+		border-radius: 12px;
+		padding: 0;
+	}
+
+	.cart-dialog::backdrop {
+		background: rgba(0, 0, 0, 0.5);
+	}
+
+	.cart-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 16px;
+		border-bottom: 1px solid #e5e7eb;
+	}
+
+	.icon-button {
+		border: none;
+		background: transparent;
+		font-size: 22px;
+		cursor: pointer;
+	}
+
+	.cart-items {
+		padding: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		max-height: 55vh;
+		overflow: auto;
+	}
+
+	.empty {
+		margin: 0;
+		color: #6b7280;
+	}
+
+	.cart-item {
+		display: grid;
+		grid-template-columns: 64px 1fr 32px;
+		gap: 12px;
+		align-items: center;
+		border: 1px solid #e5e7eb;
+		border-radius: 10px;
+		padding: 10px;
+	}
+
+	.thumb {
+		width: 64px;
+		height: 64px;
+		object-fit: cover;
+		border-radius: 8px;
+		background: #f3f4f6;
+	}
+
+	.title {
+		font-weight: 600;
+	}
+
+	.price {
+		color: #6b7280;
+		font-size: 14px;
+	}
+
+	.qty {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		margin-top: 8px;
+	}
+
+	.qty-btn {
+		width: 28px;
+		height: 28px;
+		border-radius: 8px;
+		border: 1px solid #e5e7eb;
+		background: #fff;
+		cursor: pointer;
+	}
+
+	.qty-input {
+		width: 44px;
+		text-align: center;
+		border-radius: 8px;
+		border: 1px solid #e5e7eb;
+		padding: 4px 6px;
+	}
+
+	.remove {
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		font-size: 18px;
+	}
+
+	.cart-footer {
+		border-top: 1px solid #e5e7eb;
+		padding: 16px;
+		display: grid;
+		gap: 12px;
+	}
+
+	.cart-total-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.cart-actions {
+		display: flex;
+		gap: 10px;
+	}
+
+	.secondary,
+	.primary {
+		flex: 1;
+		text-align: center;
+		padding: 10px 12px;
+		border-radius: 10px;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.secondary {
+		border: 1px solid #e5e7eb;
+		background: #fff;
+	}
+
+	.primary {
+		border: 1px solid #2563eb;
+		background: #2563eb;
+		color: #fff;
+	}
+</style>

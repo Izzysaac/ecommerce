@@ -1,20 +1,20 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@public/*": ["./public/*"],
-      "@components/*": ["./src/components/*"],
-      "@layouts*": ["./src/layouts/*"],
-      "@lib/*": ["./src/lib/*"],
-      "@assets/*": ["./src/assets/*"],
-      "@styles/*": ["./src/styles/*"],
-      "@scripts/*": ["src/scripts/*"],
-      "@pages/*": ["./src/pages/*"]
-    },
-    "strict": false,
-    "noImplicitAny": false
-  }
+	"extends": "astro/tsconfigs/strict",
+	"include": [".astro/types.d.ts", "**/*"],
+	"exclude": ["dist"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@public/*": ["./public/*"],
+			"@components/*": ["./src/components/*"],
+			"@layouts*": ["./src/layouts/*"],
+			"@lib/*": ["./src/lib/*"],
+			"@assets/*": ["./src/assets/*"],
+			"@styles/*": ["./src/styles/*"],
+			"@scripts/*": ["src/scripts/*"],
+			"@pages/*": ["./src/pages/*"]
+		},
+		"strict": false,
+		"noImplicitAny": false
+	}
 }

@@ -5,9 +5,9 @@
     "descripcion": "Molino manual con cuchillas cónicas en Acero inoxidable de 38mmMolinedas para espresso, filtrados y citación",
     "precio": 160000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "activo"
   },
@@ -17,11 +17,11 @@
     "descripcion": "Molino manual con cuchillas cónicas en Acero inoxidable de 38mmMolinedas para espresso, filtrados y citación",
     "precio": 240000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
-    "estado": "inactivo"
+    "estado": "activo"
   },
   {
     "categoria": "Molinos manuales",
@@ -29,9 +29,53 @@
     "descripcion": "Molino manual con cuchillas cónicas en Acero inoxidable de 38mmMolinedas para espresso, filtrados y citación",
     "precio": 360000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Molinos manuales",
+    "nombre": "Molino 4",
+    "descripcion": "Molino manual con cuchillas cónicas en Acero inoxidable de 38mmMolinedas para espresso, filtrados y citación",
+    "precio": 480000,
+    "media": [
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Molinos manuales",
+    "nombre": "Molino 5",
+    "descripcion": "Molino manual con cuchillas cónicas en Acero inoxidable de 38mmMolinedas para espresso, filtrados y citación",
+    "precio": 160000,
+    "media": [
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Molinos manuales",
+    "nombre": "Molino 6",
+    "descripcion": "Molino manual con cuchillas cónicas en Acero inoxidable de 38mmMolinedas para espresso, filtrados y citación",
+    "precio": 240000,
+    "media": [
+      "molino_rg49td"
+    ],
+    "estado": "activo"
+  },
+  {
+    "categoria": "Molinos manuales",
+    "nombre": "Molino 7",
+    "descripcion": "Molino manual con cuchillas cónicas en Acero inoxidable de 38mmMolinedas para espresso, filtrados y citación",
+    "precio": 360000,
+    "media": [
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "activo"
   },
@@ -41,9 +85,9 @@
     "descripcion": "Capacidad de 6 tazas",
     "precio": 310000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "activo"
   },
@@ -53,11 +97,9 @@
     "descripcion": "Incluye cuchara medidora, etc..",
     "precio": 230000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td"
     ],
-    "estado": "inactivo"
+    "estado": "activo"
   },
   {
     "categoria": "Métodos de preparación",
@@ -65,9 +107,9 @@
     "descripcion": "Incluye 40 filtros",
     "precio": 210000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "activo"
   },
@@ -77,9 +119,9 @@
     "descripcion": "Cafetera Dripper 02",
     "precio": 95000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "activo"
   },
@@ -89,9 +131,9 @@
     "descripcion": "",
     "precio": 240000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "inactivo"
   },
@@ -101,9 +143,9 @@
     "descripcion": "",
     "precio": 260000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "activo"
   },
@@ -113,9 +155,9 @@
     "descripcion": "",
     "precio": 260000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "activo"
   },
@@ -125,9 +167,9 @@
     "descripcion": "",
     "precio": 945000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "inactivo"
   },
@@ -137,9 +179,9 @@
     "descripcion": "",
     "precio": 1850000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "inactivo"
   },
@@ -149,9 +191,9 @@
     "descripcion": "",
     "precio": 11000000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "activo"
   },
@@ -161,9 +203,9 @@
     "descripcion": "",
     "precio": 110000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "activo"
   },
@@ -173,9 +215,9 @@
     "descripcion": "",
     "precio": 145000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "inactivo"
   },
@@ -185,9 +227,9 @@
     "descripcion": "",
     "precio": 180000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "activo"
   },
@@ -197,9 +239,9 @@
     "descripcion": "",
     "precio": 175000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "activo"
   },
@@ -209,9 +251,9 @@
     "descripcion": "",
     "precio": 240000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "activo"
   },
@@ -221,9 +263,9 @@
     "descripcion": "",
     "precio": 175000,
     "media": [
-      "imagen",
-      "imagen",
-      "imagen"
+      "molino_rg49td",
+      "molino_rg49td",
+      "molino_rg49td"
     ],
     "estado": "inactivo"
   }

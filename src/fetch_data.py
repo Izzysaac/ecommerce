@@ -3,7 +3,7 @@ import json
 
 def fetch_excel_data():
     try:
-        response = requests.get('https://opensheet.elk.sh/1oicYVDp3z8KORWBzFOFY4oHvvBHvqWeaZXSkAX3HL3Q/catalogo')
+        response = requests.get('https://opensheet.elk.sh/1oicYVDp3z8KORWBzFOFY4oHvvBHvqWeaZXSkAX3HL3Q/catalog')
         response.raise_for_status()
         data = response.json()
         
@@ -48,6 +48,6 @@ def save_to_json(data, output_path):
 if __name__ == "__main__":
     data = fetch_excel_data()
     if data:
-        save_to_json(data, "public/data.json")
+        save_to_json(data, "../public/data.json")
     else:
         print("No data to save")

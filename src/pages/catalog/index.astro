@@ -1,0 +1,137 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { getCategoriesWithSlug } from "@lib/builder.js";
+import data from "@public/data.json";
+import { getCldImageUrl } from 'astro-cloudinary/helpers';
+import ProductCard from "@components/ProductCard.astro";
+
+const categories = getCategoriesWithSlug();
+---
+
+<Layout>
+	<main class="px-2.5 pt-12">
+		<h1 class="text-2xl font-bold text-center">Catálogo de Productos</h1>
+		<div class="filter-container">
+			<label for="category-filter">Filtrar por categoría:</label>
+			<select id="category-filter" class="filter-select">
+				<option value="">Todas las categorías</option>
+				{categories.map((category) => (
+					<option value={category.slug}>{category.name}</option>
+				))}
+			</select>
+		</div>
+		<div id="products-container" class="products-grid">
+			<!-- <ProductCard products={data} /> -->
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.filter-container {
+		margin-bottom: 2rem;
+		padding: 1rem;
+		background: #f8f9fa;
+		border-radius: 8px;
+		border: 1px solid #dee2e6;
+	}
+	
+	.filter-container label {
+		display: block;
+		margin-bottom: 0.5rem;
+		font-weight: 600;
+		color: #495057;
+	}
+	
+	.filter-select {
+		width: 100%;
+		padding: 0.75rem;
+		border: 1px solid #ced4da;
+		border-radius: 4px;
+		background-color: white;
+		font-size: 1rem;
+		cursor: pointer;
+	}
+	
+	.filter-select:focus {
+		outline: none;
+		border-color: #80bdff;
+		box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+	}
+	
+	@media (min-width: 768px) {
+		.filter-container {
+			max-width: 300px;
+			margin: 0 auto 2rem auto;
+		}
+	}
+	
+	.products-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	@media (min-width: 400px) {
+		.products-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (min-width: 600px) {
+		.products-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	@media (min-width: 800px) {
+		.products-grid {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	@media (min-width: 1000px) {
+		.products-grid {
+			grid-template-columns: repeat(5, 1fr);
+		}
+	}
+	
+	.product-card {
+		border: 1px solid #ddd;
+		border-radius: 8px;
+		padding: 1rem;
+		text-decoration: none;
+		color: inherit;
+		display: flex;
+		flex-direction: column;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+	
+	.product-card:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	}
+	
+	.product-card img {
+		max-width: 100%;
+		height: 200px;
+		object-fit: cover;
+		margin: 0.5rem 0;
+		border-radius: 4px;
+	}
+	
+	.product-card button {
+		margin-top: auto;
+		background-color: #007bff;
+		color: white;
+		border: none;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	
+	.product-card button:hover {
+		background-color: #0056b3;
+	}
+</style>
+
+<script type="module" src="/src/scripts/clientCatalog.js"></script>

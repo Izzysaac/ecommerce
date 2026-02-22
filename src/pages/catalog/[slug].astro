@@ -1,0 +1,71 @@
+---
+import ImageCarousel from "@components/ImageCarousel.astro";
+import Layout from "../../layouts/Layout.astro";
+import data from "@public/data.json";
+
+export function getStaticPaths() {
+	return data.map((item) => ({
+		params: {
+			slug: item.nombre
+				.toLowerCase()
+				.normalize("NFD")
+				.replace(/[\u0300-\u036f]/g, "")
+				.replace(/\s+/g, "-")
+				.replace(/[^a-z0-9-]/g, ""),
+		},
+		props: { item },
+	}));
+}
+
+const { item } = Astro.props;
+
+const productId = item.nombre
+	.toLowerCase()
+	.normalize("NFD")
+	.replace(/[\u0300-\u036f]/g, "")
+	.replace(/\s+/g, "-")
+	.replace(/[^a-z0-9-]/g, "");
+---
+
+<Layout>
+	<main class="flex flex-col text-center pt-15">
+
+		<ImageCarousel media={item.media}/>
+
+		<h1 class="text-2xl font-bold mt-2" >{item.nombre}</h1>
+
+		<p>{item.descripcion}</p>
+
+		<p>${item.precio.toLocaleString()}</p>
+
+		<div>
+			<button
+				id="add-to-cart"
+				data-id={productId}
+				data-title={item.nombre}
+				data-price={item.precio}
+				data-image={item.media?.[0] ?? ""}
+				class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+			>
+				Añadir al carrito
+			</button>
+		</div>
+	</main>
+</Layout>
+
+<script>
+	import { addToCart } from "../../lib/cart.js";
+
+	const btn = document.getElementById("add-to-cart");
+	btn?.addEventListener("click", () => {
+		const product = {
+			id: btn.dataset.id,
+			title: btn.dataset.title,
+			price: Number(btn.dataset.price),
+			image: btn.dataset.image,
+		};
+
+		addToCart(product);
+		window.dispatchEvent(new Event("cartUpdated"));
+	});
+</script>

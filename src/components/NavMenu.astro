@@ -1,0 +1,250 @@
+---
+import { Image } from "astro:assets";
+import logotipo from "../assets/logotipo.png";
+import MenuIcon from "../assets/menu.svg";
+import SearchIcon from "../assets/search.svg";
+import CartIcon from "../assets/cart.svg";
+import CrossIcon from "../assets/cross.svg";
+
+import { getCategoriesWithSlug } from "@lib/builder";
+const categories = getCategoriesWithSlug();
+---
+
+<menu class="flex w-full items-center justify-between p-2.5 text-(--color-text) bg-(--color-bg) m-0 box-border fixed top-0 z-100">
+
+	<div class="flex items-center gap-2">
+		<button
+			class="block border-0 bg-transparent cursor-pointer"
+			id="open-sidebar-button"
+			aria-label="open sidebar"
+			aria-expanded="false"
+			aria-controls="navbar"
+		>
+			<MenuIcon width="30px" height="30px" />
+		</button>
+		<!-- <a href="/" class="block" >
+			<Image src={logotipo} alt="Buitrón" width={100} />
+		</a> -->
+		
+	</div>
+
+	<a href="/" class="block text-xl font-bold" >
+			El Rincón del Barista
+	</a>
+
+	<div class="flex items-center gap-2">
+		<!-- <button
+			class="block border-0 bg-transparent cursor-pointer"
+			id="open-search-button"
+			aria-label="open search"
+			aria-expanded="false"
+			aria-controls="search"
+		>
+			<SearchIcon width="25px" height="25px" />
+	
+		</button> -->
+		<button
+			class="block border-0 bg-transparent cursor-pointer"
+			id="open-cart-button"	
+			aria-label="open cart"
+			aria-expanded="false"
+			aria-controls="cart"
+		>
+			<span class="cart-button">
+				<CartIcon width="25px" height="25px" />
+				<span id="cart-badge" class="cart-badge" aria-label="items in cart">0</span>
+			</span>
+		</button>
+	</div>
+
+	<nav id="navbar"
+	class="text-lg">
+		<ul>
+			<li>
+				<button
+					id="close-sidebar-button"
+					aria-label="close sidebar"
+				>
+					<CrossIcon width="30px" height="30px" />
+				</button>
+			</li>
+
+			<li>
+				<a href="/">Inicio</a>
+			</li>
+			
+			{
+				categories.map((category) => (
+					<li>
+						<a href={`/catalog/?category=${category.slug}`}>{category.name}</a>
+					</li>
+				))
+			}
+		</ul>
+	</nav>
+
+	<div id="overlay" aria-hidden="true"></div>
+</menu>
+
+<style>
+	@import "tailwindcss";
+
+	button{
+		@apply cursor-pointer flex items-center;
+	}
+
+	nav {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: -0;
+		height: 100vh;
+		width: min(15em, 100%);
+		z-index: 10;
+		border-left: 1px solid var(--hover-color);
+		transition: left 300ms ease-in-out;
+		background-color: var(--color-bg);
+		color: var(--color-text);
+	}
+	ul {
+		@apply flex flex-col p-3 gap-6 ;
+	}
+	.show {
+		display: block;
+	}
+	#overlay {
+		display: none;
+	}
+
+	.cart-button {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+	}
+
+	.cart-badge {
+		position: absolute;
+		top: -6px;
+		right: -8px;
+		min-width: 16px;
+		height: 16px;
+		padding: 0 4px;
+		border-radius: 999px;
+		background: #ef4444;
+		color: white;
+		font-size: 11px;
+		line-height: 16px;
+		text-align: center;
+		font-weight: 700;
+	}
+
+	nav.show ~ #overlay {
+		background: rgba(0, 0, 0, 0.5);
+		position: fixed;
+		inset: 0;
+		z-index: 9;
+		display: block;
+	}
+
+</style>
+
+<script src="/src/scripts/navMenu.js"></script>
+
+<!-- <style>
+	nav {
+		background-color: var(--primary-color);
+		border-bottom: 1px solid var(--hover-color);
+	}
+	nav ul {
+		list-style: none;
+		display: flex;
+	}
+	nav .home-li {
+		margin-right: auto;
+	}
+	nav li {
+		display: flex;
+	}
+	nav a {
+		display: flex;
+		text-decoration: none;
+		color: var(--text-color);
+		padding: 1em 2em;
+		transition: background-color 150ms ease;
+	}
+	nav a:hover {
+		background-color: var(--hover-color);
+	}
+	nav a.active-link {
+		border-bottom: 2px solid var(--text-color);
+	}
+	nav a.accent-link {
+		background-color: var(--accent-color);
+	}
+
+	#close-sidebar-button {
+		display: none;
+		background: none;
+		border: none;
+		padding: 1em;
+		cursor: pointer;
+	}
+	#overlay {
+		background: rgba(0, 0, 0, 0.5);
+		position: fixed;
+		inset: 0;
+		z-index: 9;
+		display: none;
+	}
+	.skip-link {
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		z-index: 1000;
+		background-color: var(--accent-color);
+		color: #ffffff;
+		padding: 12px 24px;
+		border-radius: 5px;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 1rem;
+		transition: opacity 0.3s ease;
+	}
+
+	.skip-link:focus {
+		opacity: 1;
+		pointer-events: auto;
+		outline: 3px solid #ffffff;
+	}
+	@media screen and (max-width: 700px) {
+		#open-sidebar-button,
+		#close-sidebar-button {
+			display: block;
+		}
+
+		nav.show {
+			right: 0;
+		}
+		nav.show ~ #overlay {
+			display: block;
+		}
+		nav ul {
+			width: 100%;
+			flex-direction: column;
+		}
+		nav a {
+			width: 100%;
+			padding-left: 2.5em;
+		}
+		nav a.active-link {
+			border-bottom: none;
+		}
+		nav .home-li {
+			margin-right: unset;
+		}
+	}
+
+
+</style> -->

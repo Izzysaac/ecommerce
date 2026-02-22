@@ -1,0 +1,39 @@
+---
+import { getCldImageUrl } from "astro-cloudinary/helpers";
+const { products } = Astro.props;
+---
+
+{products.map((product) => (
+	<a
+		href={`/catalog/${product.nombre
+				.toLowerCase()
+				.replace(/\s+/g, "-")
+				.replace(/[^a-z0-9-]/g, "")}`}
+		class="flex flex-col text-center"
+	>
+		<h2>{product.nombre}</h2>
+		<p>${product.precio.toLocaleString()}</p>
+
+		{product.media.length > 0 && (
+			<img
+				src={getCldImageUrl({ src: product.media[0] })}
+				alt={product.nombre}
+				class="order-first"
+                loading="lazy"
+			/>
+		)}
+	</a>
+))}
+
+<style>
+	.product-card img {
+		max-width: 100%;
+		height: 200px;
+		object-fit: cover;
+		margin: 1rem 0;
+	}
+
+	.product-card button {
+		margin-top: auto;
+	}
+</style>
