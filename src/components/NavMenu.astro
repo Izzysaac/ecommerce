@@ -20,7 +20,7 @@ const categories = getCategoriesWithSlug();
 			aria-expanded="false"
 			aria-controls="navbar"
 		>
-			<MenuIcon width="30px" height="30px" />
+			<MenuIcon width="28px" height="28px" />
 		</button>
 		<!-- <a href="/" class="block" >
 			<Image src={logotipo} alt="Buitrón" width={100} />
@@ -89,6 +89,9 @@ const categories = getCategoriesWithSlug();
 <style>
 	@import "tailwindcss";
 
+	menu {
+		@apply max-w-[768px] mx-auto;
+	}
 	button{
 		@apply cursor-pointer flex items-center;
 	}
@@ -102,10 +105,20 @@ const categories = getCategoriesWithSlug();
 		width: min(15em, 100%);
 		z-index: 10;
 		border-left: 1px solid var(--hover-color);
-		transition: left 300ms ease-in-out;
 		background-color: var(--color-bg);
 		color: var(--color-text);
+
 	}
+	nav.show ~ #overlay {
+		background: rgba(0, 0, 0, 0.5);
+		position: fixed;
+		inset: 0;
+		z-index: 9;
+		display: block;
+	}
+
+
+
 	ul {
 		@apply flex flex-col p-3 gap-6 ;
 	}
@@ -138,13 +151,7 @@ const categories = getCategoriesWithSlug();
 		font-weight: 700;
 	}
 
-	nav.show ~ #overlay {
-		background: rgba(0, 0, 0, 0.5);
-		position: fixed;
-		inset: 0;
-		z-index: 9;
-		display: block;
-	}
+	
 
 </style>
 

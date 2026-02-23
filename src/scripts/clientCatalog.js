@@ -1,5 +1,5 @@
 import data from '../../public/data.json';
-import { getCldImageUrl } from 'astro-cloudinary/helpers';
+import { getCloudinaryImageUrl } from '../scripts/imgHelper';
 
 let allProducts = [];
 let filteredProducts = [];
@@ -26,7 +26,7 @@ export const renderProducts = (products) => {
 			<a href="/catalog/${createProductSlug(product.nombre)}" class="flex flex-col text-center">
 				<h2>${product.nombre}</h2>
 				<p>$${product.precio.toLocaleString()}</p>
-				${product.media.length > 0 ? `<img src=${getCldImageUrl({ src: product.media[0], width: 600, height: 600 })} alt="${product.nombre}" loading="lazy" class="order-first"/>` : ''}
+				${product.media.length > 0 ? `<img src=${getCloudinaryImageUrl(product.media[0], { width: 600, height: 600 })} alt="${product.nombre}" loading="lazy" class="order-first"/>` : ''}
 			</a>
 		</div>
 	`).join('');

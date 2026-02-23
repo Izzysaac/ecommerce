@@ -28,7 +28,7 @@ const productId = item.nombre
 ---
 
 <Layout>
-	<main class="flex flex-col text-center pt-15">
+	<main class="flex flex-col text-center pt-12">
 
 		<ImageCarousel media={item.media}/>
 
@@ -45,7 +45,7 @@ const productId = item.nombre
 				data-title={item.nombre}
 				data-price={item.precio}
 				data-image={item.media?.[0] ?? ""}
-				class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+				class="bg-(--brand) text-(--on-brand) active:bg-(--brand-hover) font-bold py-2 px-4 rounded"
 			>
 				Añadir al carrito
 			</button>
@@ -66,6 +66,7 @@ const productId = item.nombre
 		};
 
 		addToCart(product);
+		document.dispatchEvent(new Event("cart:open"));
 		window.dispatchEvent(new Event("cartUpdated"));
 	});
 </script>

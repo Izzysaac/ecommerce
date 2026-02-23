@@ -6,8 +6,7 @@ const { selectedCategory } = Astro.props;
 ---
 
 <div class="filter-container">
-	<h3>Filtrar por categoría</h3>
-	
+	<h3>Filtrar</h3>
 	<select 
 		id="category-filter" 
 		class="filter-select"
@@ -46,11 +45,11 @@ const { selectedCategory } = Astro.props;
 
 <style>
 	.filter-container {
-		margin-bottom: 2rem;
 		padding: 1rem;
 		background: #f8f9fa;
 		border-radius: 8px;
 		border: 1px solid #dee2e6;
+		display: flex;
 	}
 	
 	.filter-container h3 {

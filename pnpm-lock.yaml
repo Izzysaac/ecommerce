@@ -14,6 +14,9 @@ dependencies:
   astro-cloudinary:
     specifier: ^1.3.5
     version: 1.3.5(astro@5.17.3)(typescript@5.9.3)
+  sharp:
+    specifier: ^0.34.5
+    version: 0.34.5
   tailwindcss:
     specifier: ^4.2.0
     version: 4.2.0
@@ -640,7 +643,6 @@ packages:
     engines: {node: '>=18'}
     requiresBuild: true
     dev: false
-    optional: true
 
   /@img/sharp-darwin-arm64@0.34.5:
     resolution: {integrity: sha512-imtQ3WMJXbMY4fxb/Ndp6HBTNVtWCUI0WdobyheGf5+ad6xX8VIDO8u2xE4qc/fr08CKG/7dDseFtn6M6g/r3w==}
@@ -3346,7 +3348,6 @@ packages:
       '@img/sharp-win32-ia32': 0.34.5
       '@img/sharp-win32-x64': 0.34.5
     dev: false
-    optional: true
 
   /shiki@3.22.0:
     resolution: {integrity: sha512-LBnhsoYEe0Eou4e1VgJACes+O6S6QC0w71fCSp5Oya79inkwkm15gQ1UF6VtQ8j/taMDh79hAB49WUk8ALQW3g==}
